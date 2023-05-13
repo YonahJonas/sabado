@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opções para o Sábado</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 50px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		button {
+			margin: 20px;
+			padding: 15px;
+			border-radius: 5px;
+			border: none;
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		#casa {
+			background-color: #ffa500;
+		}
+
+		#cachorrada {
+			background-color: #1e90ff;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Opções para o Sábado</h1>
+	<button id="casa" onclick="window.location.href='https://youtu.be/jWW9P1zca_w?t=4'">Casa</button>
+	<button id="cachorrada">Cachorrada</button>
+	<script>
+		var cachorradaButton = document.getElementById("cachorrada");
+
+		cachorradaButton.onclick = function() {
+			var left = Math.floor(Math.random() * (window.innerWidth - cachorradaButton.offsetWidth));
+			var top = Math.floor(Math.random() * (window.innerHeight - cachorradaButton.offsetHeight));
+
+			cachorradaButton.style.position = "absolute";
+			cachorradaButton.style.left = left + "px";
+			cachorradaButton.style.top = top + "px";
+		}
+	</script>
+</body>
+</html>
